@@ -83,16 +83,63 @@ ternyata benar saja, bahwa jika diperhatikan bahwa huruf depan setiap huruf kala
 
 # Forensic
 ## SHIFT
+
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Double Deleted Data
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Sandwiched
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
 
 # Beginner
 ## Half-time Survey
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Sanity Check
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Run-ELF
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Stringy Things
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Cipher gauntlet
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Magic Bytes
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## HTML
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Sizzling Bacon
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
+
 ## Various Vernacular
+### Deskripsi Soal
+### Penyelesaian
+**Flag: **
