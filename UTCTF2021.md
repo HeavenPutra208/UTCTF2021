@@ -83,10 +83,50 @@ ternyata benar saja, bahwa jika diperhatikan bahwa huruf depan setiap huruf kala
 
 # Forensic
 ## SHIFT
-
 ### Deskripsi Soal
+I just tried to download this flag, but it looks like the image got messed up in transit...
+
+![Shift](https://github.com/HeavenPutra208/UTCTF2021/blob/main/SHIFT%20(1).png)
 ### Penyelesaian
-**Flag: **
+Saat gambar pada deskripsi soal dibuka, dapat diketahui bahwa terdapat tulisan di mana setiap baris gambar telah bergeser secara bertahap semakin jauh. Piksel membungkus kembali ke depan baris jika melewati lebar gambar. Oleh karena itu, di sini saya menggunakan bantuan python untuk merapikan gambar ke aslinya.
+
+Program
+```pyhton
+from PIL import Image
+import numpy
+
+image = Image.open('SHIFT.png')
+pixels = list(image.getdata())
+w, h = image.size
+
+# split pixels by row
+pixels = [pixels[i * w : (i + 1) * w] for i in range(h)]
+
+result = []
+
+shift = 0
+for row in pixels:
+    # get two halves of row
+    left = row[:w - shift]
+    right = row[w - shift:]
+
+    # flip the two halves (this unshifts them)
+    new_row = right + left
+
+    # increase shift and wrap around row length
+    shift = (shift + 6) % w
+    result.append(new_row)
+
+# save to new image
+array = numpy.array(result, dtype=numpy.uint8)
+new = Image.fromarray(array)
+new.save('flag.png')
+```
+
+Setelah diproses, maka akan diperoleh gambar berikut:
+![ini shift flag](https://github.com/HeavenPutra208/UTCTF2021/blob/main/SHIFT(known%20flag).png)
+
+**Flag: utflag{not_when_i_shift_into_maximum_overdrive}**
 
 ## Double Deleted Data
 ### Deskripsi Soal
